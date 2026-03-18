@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { cn } from "@/lib/utils"
 import NavbarGlass from "@/components/navbar-glass"
+import Footer from "@/components/footer"
 
 const notoSans = Noto_Sans({ variable: "--font-sans" })
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ThemeProvider>
           <NavbarGlass />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
