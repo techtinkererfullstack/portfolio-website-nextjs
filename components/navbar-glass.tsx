@@ -4,17 +4,16 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation" // 1. Import hook
 import { motion } from "framer-motion"
-import { useTheme } from "next-themes"
+import ThemeToggle from "./themeToggle"
 
 export default function NavbarGlass() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname() // 2. Get current URL path
-  const { setTheme, resolvedTheme } = useTheme()
+
   const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
-  const toggleTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
-  }
+
+  if (!mounted) return <div className="h-10 w-28 p-2" /> // Placeholder
 
   const navLinks = [
     { name: "Home", href: "/home" },
@@ -87,27 +86,7 @@ export default function NavbarGlass() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <button
-                onClick={toggleTheme}
-                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all hover:bg-primary/10 dark:hover:bg-white/10"
-              >
-                {mounted ? (
-                  <>
-                    {/* Dynamic Icon */}
-                    <span className="material-symbols-outlined text-[20px]">
-                      {resolvedTheme === "dark" ? "light_mode" : "dark_mode"}
-                    </span>
-
-                    {/* Dynamic Text - This is what you were missing! */}
-                    <span className="hidden sm:inline">
-                      {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
-                    </span>
-                  </>
-                ) : (
-                  <div className="h-5 w-20 animate-pulse rounded bg-slate-200 dark:bg-white/5" />
-                )}
-              </button>
-
+              <ThemeToggle />
               <button
                 className="p-2 transition-colors hover:text-primary md:hidden dark:hover:text-emerald-400"
                 onClick={() => setIsOpen(true)}

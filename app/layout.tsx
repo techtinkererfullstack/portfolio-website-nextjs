@@ -30,8 +30,10 @@ export default function RootLayout({
       )}
     >
       <body>
-        <NavbarGlass />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <NavbarGlass />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
