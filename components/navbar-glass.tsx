@@ -5,6 +5,10 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation" // 1. Import hook
 import { motion } from "framer-motion"
 import ThemeToggle from "./themeToggle"
+import { VscTerminalDebian } from "react-icons/vsc"
+import { FaPhoneAlt, FaUser, FaWhatsapp } from "react-icons/fa"
+import { IoMdDownload } from "react-icons/io"
+import { TbBrandWhatsappFilled } from "react-icons/tb"
 
 export default function NavbarGlass() {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,6 +36,7 @@ export default function NavbarGlass() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="group flex cursor-pointer items-center gap-2">
+              <VscTerminalDebian size={20} className="text-primary" />
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Shafe Alam
               </span>
@@ -87,6 +92,14 @@ export default function NavbarGlass() {
 
             <div className="flex items-center gap-3">
               <ThemeToggle />
+              <button className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 py-2 pr-3 pl-3 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5">
+                <FaUser />
+              </button>
+
+              <button className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 py-2 pr-3 pl-3 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5">
+                <FaWhatsapp />
+              </button>
+
               <button
                 className="p-2 transition-colors hover:text-primary md:hidden dark:hover:text-emerald-400"
                 onClick={() => setIsOpen(true)}

@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")} // This MUST match your hotkey logic
-      className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 px-4 py-2 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5"
+      className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 py-2 pl-3 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5"
     >
       {isDark ? (
         <>
