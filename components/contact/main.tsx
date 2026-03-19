@@ -1,9 +1,13 @@
+"use client"
+
+import useReveal from "@/hooks/reveal"
+
 export default function Main() {
+  useReveal()
   return (
     <main className="px-4 pt-20 pb-20 sm:px-6 md:pt-32 lg:px-8">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12">
-        {/* <!-- Left Column: Let's Connect --> */}
-        <div className="flex flex-col justify-center lg:col-span-5">
+        <section className="reveal flex flex-col justify-center lg:col-span-5">
           <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-400">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75 dark:bg-emerald-400"></span>
@@ -89,9 +93,9 @@ export default function Main() {
               </svg>
             </a>
           </div>
-        </div>
+        </section>
         {/* <!-- Right Column: Contact Form & Map --> */}
-        <div className="lg:col-span-7">
+        <section className="reveal flex flex-col justify-center lg:col-span-7">
           <div className="glass rounded-2xl p-8 shadow-2xl md:p-12">
             <form action="#" className="space-y-8">
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -198,7 +202,7 @@ export default function Main() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
   )

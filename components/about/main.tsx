@@ -1,16 +1,24 @@
+"use client"
+
+import useReveal from "@/hooks/reveal"
+import Image from "next/image"
+
 export default function Main() {
+  useReveal()
   return (
     <main className="mx-auto w-full max-w-7xl flex-1 space-y-32 px-4 py-10 sm:px-6 md:py-12 md:py-24 lg:px-8">
       {/* <!-- Hero Section / Introduction --> */}
-      <section className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <section className="reveal grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="group relative">
           <div className="absolute -inset-4 rounded-2xl bg-primary/20 opacity-50 blur-2xl transition-opacity group-hover:opacity-70"></div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10">
-            <img
+            <Image
               alt="Professional portrait of a software engineer"
               className="h-full w-full object-cover"
               data-alt="Professional portrait of a male software engineer in a modern setting"
-              src="./public/profile.png"
+              src="/profile.png"
+              width={1000}
+              height={1000}
             />
           </div>
         </div>
@@ -68,7 +76,7 @@ export default function Main() {
         </div>
       </section>
       {/* <!-- Core Values Section --> */}
-      <section className="space-y-12">
+      <section className="reveal space-y-12">
         <div className="space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tight">
             Professional Philosophy

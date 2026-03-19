@@ -1,9 +1,14 @@
+"use client"
+
+import useReveal from "@/hooks/reveal"
+
 export default function Main() {
+  useReveal()
   return (
     <main className="px-6 pt-28 pb-20">
       <div className="mx-auto max-w-7xl">
         {/* <!-- Hero Header Section --> */}
-        <header className="mb-16 flex flex-col items-center gap-8 md:flex-row md:items-start">
+        <header className="reveal mb-16 flex flex-col items-center gap-8 md:flex-row md:items-start">
           <div className="group relative">
             <div className="absolute -inset-1 rounded-full bg-primary/30 blur transition duration-500 group-hover:bg-primary/50"></div>
             <div
@@ -49,7 +54,7 @@ export default function Main() {
           </div>
         </header>
         {/* <!-- Quick Stats --> */}
-        <div className="mb-16 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <section className="reveal mb-16 grid grid-cols-2 gap-4 md:grid-cols-4">
           <div className="group rounded-xl border border-primary/20 bg-primary/10 p-6 transition-all hover:border-primary/40">
             <p className="mb-1 text-xs font-bold tracking-wider text-slate-500 uppercase dark:text-slate-400">
               Experience
@@ -82,9 +87,9 @@ export default function Main() {
               12
             </p>
           </div>
-        </div>
+        </section>
         {/* <!-- Experience Section --> */}
-        <section className="mb-16" id="experience">
+        <section className="reveal mb-16" id="experience">
           <h2 className="mb-8 flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
             <span className="material-symbols-outlined text-primary">work</span>
             Professional Experience
@@ -184,7 +189,7 @@ export default function Main() {
           </div>
         </section>
         {/* <!-- Skills Section --> */}
-        <section className="mb-16" id="skills">
+        <section className="reveal mb-16" id="skills">
           <h2 className="mb-8 flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
             <span className="material-symbols-outlined text-primary">
               psychology
@@ -294,9 +299,9 @@ export default function Main() {
             </div>
           </div>
         </section>
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
+        <section className="reveal grid grid-cols-1 gap-16 md:grid-cols-2">
           {/* <!-- Education --> */}
-          <section id="education">
+          <section className="reveal" id="education">
             <h2 className="mb-8 flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
               <span className="material-symbols-outlined text-primary">
                 school
@@ -325,7 +330,7 @@ export default function Main() {
             </div>
           </section>
           {/* <!-- Certifications --> */}
-          <section id="certifications">
+          <section className="reveal" id="certifications">
             <h2 className="mb-8 flex items-center gap-3 text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
               <span className="material-symbols-outlined text-primary">
                 verified
@@ -365,9 +370,9 @@ export default function Main() {
               </div>
             </div>
           </section>
-        </div>
+        </section>
         {/* <!-- Footer --> */}
-        <footer className="mt-32 border-t border-primary/10 pt-12 text-center">
+        <footer className="reveal mt-32 border-t border-primary/10 pt-12 text-center">
           <p className="mt-1 text-xs text-slate-400">
             © 2024 Alex Rivers. Built with Tailwind CSS and Inter Typeface.
           </p>
