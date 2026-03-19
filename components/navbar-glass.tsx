@@ -13,6 +13,12 @@ import { CiMenuFries } from "react-icons/ci"
 import { IoIosClose } from "react-icons/io"
 
 export default function NavbarGlass() {
+  const phoneNumber = "8801944722657" // Replace with your number
+  const message = encodeURIComponent(
+    "Hello, I have a question about your service."
+  )
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname() // 2. Get current URL path
 
@@ -101,11 +107,19 @@ export default function NavbarGlass() {
             <div className="flex items-center gap-3">
               <ThemeToggle />
               <button className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 py-2 pr-3 pl-3 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5">
-                <FaUser />
+                <Link href="/login">
+                  <FaUser />
+                </Link>
               </button>
 
               <button className="flex items-center gap-3 rounded-xl border border-transparent bg-slate-200/50 py-2 pr-3 pl-3 transition-all hover:border-primary/30 hover:bg-primary/20 dark:bg-white/5">
-                <FaWhatsapp />
+                <Link
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp />
+                </Link>
               </button>
 
               <button
