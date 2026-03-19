@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation" // 1. Import hook
 import { motion } from "framer-motion"
 import ThemeToggle from "./themeToggle"
 import { VscTerminalDebian } from "react-icons/vsc"
-import { FaPhoneAlt, FaUser, FaWhatsapp } from "react-icons/fa"
-import { IoMdDownload } from "react-icons/io"
-import { TbBrandWhatsappFilled } from "react-icons/tb"
+import { FaUser, FaWhatsapp } from "react-icons/fa"
+import { AiOutlineAndroid } from "react-icons/ai"
+import Image from "next/image"
+import { CiMenuFries } from "react-icons/ci"
+import { IoIosClose } from "react-icons/io"
 
 export default function NavbarGlass() {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,8 +37,14 @@ export default function NavbarGlass() {
       <header className="glass-nav dark:bg-background-dark/70 sticky top-0 z-50 w-full border-b border-slate-200 bg-white/70 backdrop-blur-md dark:border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="group flex cursor-pointer items-center gap-2">
-              <VscTerminalDebian size={20} className="text-primary" />
+            <div className="group flex cursor-pointer items-center gap-0">
+              <Image
+                alt="Profile Picture"
+                className="h-10 w-10 rounded-full object-cover pl-0"
+                src="/android1.png"
+                width={60}
+                height={60}
+              />
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Shafe Alam
               </span>
@@ -104,7 +112,9 @@ export default function NavbarGlass() {
                 className="p-2 transition-colors hover:text-primary md:hidden dark:hover:text-emerald-400"
                 onClick={() => setIsOpen(true)}
               >
-                <span className="material-symbols-outlined">menu</span>
+                <span className="material-symbols-outlined">
+                  <CiMenuFries />
+                </span>
               </button>
             </div>
           </div>
@@ -122,7 +132,7 @@ export default function NavbarGlass() {
           onClick={() => setIsOpen(false)}
         >
           <span className="material-symbols-outlined text-3xl text-red-500">
-            close
+            <IoIosClose />
           </span>
         </button>
         <nav className="flex flex-col items-center gap-8 text-2xl font-bold">

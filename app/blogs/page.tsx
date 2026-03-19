@@ -1,9 +1,10 @@
+import Main from "@/components/blogs/main"
 import Page from "../page"
 
 export default function Blogs() {
   return (
     <Page>
-      <h1>Blogs</h1>
+      <Main />
     </Page>
   )
 }
