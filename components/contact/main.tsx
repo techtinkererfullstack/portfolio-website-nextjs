@@ -1,48 +1,51 @@
 export default function Main() {
   return (
-    <main className="px-6 pt-32 pb-20">
+    <main className="px-4 pt-20 pb-20 sm:px-6 md:pt-32 lg:px-8">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-12">
         {/* <!-- Left Column: Let's Connect --> */}
         <div className="flex flex-col justify-center lg:col-span-5">
-          <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-accent/20 bg-primary/20 px-3 py-1 text-xs font-bold tracking-widest text-accent uppercase">
+          <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-400">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75 dark:bg-emerald-400"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary dark:bg-emerald-400"></span>
             </span>
             Available for projects
           </div>
-          <h1 className="mb-6 text-5xl leading-[1.1] font-black tracking-tight lg:text-7xl">
+          <h1 className="mb-6 text-2xl leading-[1.1] font-black tracking-tight text-slate-900 sm:text-3xl md:text-5xl lg:text-7xl dark:text-slate-100">
             Let's build <br />
-            <span className="text-accent">something</span> great.
+            <span className="text-primary dark:text-emerald-400">
+              something
+            </span>{" "}
+            great.
           </h1>
-          <p className="mb-10 max-w-md text-lg leading-relaxed text-slate-400">
+          <p className="mb-10 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400">
             Senior Full-Stack Engineer based in San Francisco. I'm currently
             looking for high-impact opportunities in AI, Fintech, or Cloud
             Infrastructure.
           </p>
           <div className="mb-12 space-y-6">
             <div className="group flex cursor-pointer items-center gap-4">
-              <div className="flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-accent group-hover:text-primary">
+              <div className="dark:group-hover:text-emerald-400\ flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary/50 group-hover:text-primary dark:group-hover:bg-emerald-400/30">
                 <span className="material-symbols-outlined">mail</span>
               </div>
               <div>
                 <p className="text-xs font-bold tracking-tighter text-slate-500 uppercase">
                   Email me at
                 </p>
-                <p className="text-lg font-medium transition-colors group-hover:text-accent">
+                <p className="text-sm font-medium transition-colors group-hover:text-accent sm:text-base">
                   hello@alexrivera.dev
                 </p>
               </div>
             </div>
             <div className="group flex cursor-pointer items-center gap-4">
-              <div className="flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-accent group-hover:text-primary">
+              <div className="flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary/50 group-hover:text-primary dark:group-hover:bg-emerald-400/30 dark:group-hover:text-emerald-400">
                 <span className="material-symbols-outlined">location_on</span>
               </div>
               <div>
                 <p className="text-xs font-bold tracking-tighter text-slate-500 uppercase">
                   Current Location
                 </p>
-                <p className="text-lg font-medium transition-colors group-hover:text-accent">
+                <p className="text-sm font-medium transition-colors group-hover:text-accent sm:text-base">
                   San Francisco, CA
                 </p>
               </div>
@@ -50,7 +53,7 @@ export default function Main() {
           </div>
           <div className="flex gap-4">
             <a
-              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-accent hover:text-primary"
+              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-primary/50 hover:text-primary dark:hover:bg-emerald-400/30 dark:hover:text-emerald-400"
               href="#"
             >
               <span className="sr-only">GitHub</span>
@@ -62,7 +65,7 @@ export default function Main() {
               </svg>
             </a>
             <a
-              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-accent hover:text-primary"
+              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-primary/50 hover:text-primary dark:hover:bg-emerald-400/30 dark:hover:text-emerald-400"
               href="#"
             >
               <span className="sr-only">LinkedIn</span>
@@ -74,7 +77,7 @@ export default function Main() {
               </svg>
             </a>
             <a
-              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-accent hover:text-primary"
+              className="glass group flex size-12 items-center justify-center rounded-xl transition-all duration-300 hover:bg-primary/50 hover:text-primary dark:hover:bg-emerald-400/30 dark:hover:text-emerald-400"
               href="#"
             >
               <span className="sr-only">Twitter X</span>

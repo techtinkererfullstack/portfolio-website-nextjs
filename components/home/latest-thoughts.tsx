@@ -1,12 +1,14 @@
 "use Client"
 
+import { FaArrowCircleRight } from "react-icons/fa"
+
 export default function LatestThoughts() {
   return (
     <div>
       <section className="reveal mt-32 pb-20">
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
               Latest Thoughts
             </h2>
             <div className="mt-2 h-1.5 w-12 rounded-full bg-primary"></div>
@@ -17,7 +19,7 @@ export default function LatestThoughts() {
           >
             Read Blog
             <span className="material-symbols-outlined text-sm">
-              arrow_forward
+              <FaArrowCircleRight />
             </span>
           </a>
         </div>
@@ -29,7 +31,7 @@ export default function LatestThoughts() {
               </span>
               <span className="text-xs text-slate-500">Oct 24, 2023</span>
             </div>
-            <h3 className="mb-3 text-2xl font-bold">
+            <h3 className="mb-3 text-lg font-bold sm:text-xl">
               Mastering CSS Grid in 2024
             </h3>
             <p className="text-sage-800 mb-6 line-clamp-2 dark:text-slate-400">
@@ -53,7 +55,7 @@ export default function LatestThoughts() {
               </span>
               <span className="text-xs text-slate-500">Oct 18, 2023</span>
             </div>
-            <h3 className="mb-3 text-2xl font-bold">
+            <h3 className="mb-3 text-lg font-bold sm:text-xl">
               The Psychology of Emerald Accents
             </h3>
             <p className="text-sage-800 mb-6 line-clamp-2 dark:text-slate-400">

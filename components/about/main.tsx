@@ -1,6 +1,6 @@
 export default function Main() {
   return (
-    <main className="mx-auto w-full max-w-7xl flex-1 space-y-32 px-6 py-12 md:py-24">
+    <main className="mx-auto w-full max-w-7xl flex-1 space-y-32 px-4 py-10 sm:px-6 md:py-12 md:py-24 lg:px-8">
       {/* <!-- Hero Section / Introduction --> */}
       <section className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="group relative">
@@ -18,12 +18,14 @@ export default function Main() {
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold tracking-widest text-primary uppercase">
             My Story
           </div>
-          <h1 className="text-5xl leading-[1.1] font-bold tracking-tight md:text-6xl">
+          <h1 className="text-2xl leading-[1.1] font-bold tracking-tight text-slate-900 sm:text-3xl md:text-5xl lg:text-6xl dark:text-slate-100">
             Crafting digital
-            <span className="text-primary italic">excellence</span> through
-            code.
+            <span className="text-primary italic dark:text-emerald-400">
+              excellence
+            </span>{" "}
+            through code.
           </h1>
-          <div className="space-y-6 font-sans text-lg leading-relaxed text-slate-400">
+          <div className="space-y-6 font-sans text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400">
             <p>
               I'm a Senior Full-Stack Engineer based in San Francisco with over
               8 years of experience building scalable, user-centric digital
@@ -41,7 +43,9 @@ export default function Main() {
           </div>
           <div className="flex items-center gap-6 pt-4">
             <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">8+</span>
+              <span className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
+                8+
+              </span>
               <span className="text-sm tracking-widest text-slate-500 uppercase">
                 Years Exp.
               </span>

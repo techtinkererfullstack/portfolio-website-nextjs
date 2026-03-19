@@ -1,10 +1,12 @@
+import { FaArrowCircleRight, FaArrowRight } from "react-icons/fa"
+
 export default function FeatureProjects() {
   return (
     <div>
       <section className="reveal mt-32">
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
               Featured Projects
             </h2>
             <div className="mt-2 h-1.5 w-12 rounded-full bg-primary"></div>
@@ -15,7 +17,7 @@ export default function FeatureProjects() {
           >
             View All Projects
             <span className="material-symbols-outlined text-sm">
-              arrow_forward
+              <FaArrowCircleRight />
             </span>
           </a>
         </div>

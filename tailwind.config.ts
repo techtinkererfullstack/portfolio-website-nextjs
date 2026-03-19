@@ -13,6 +13,7 @@ const config: Config = {
         primary: "#10b981", // Emerald-500
         "background-light": "#f8fdfa",
         "background-dark": "#10221d",
+        "glass-border": "rgba(146, 201, 186, 0.1)",
         sage: {
           50: "#f0fdf4",
           100: "#dcfce7",
@@ -29,6 +30,12 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-inter)", "sans-serif"],
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px",
       },
     },
   },

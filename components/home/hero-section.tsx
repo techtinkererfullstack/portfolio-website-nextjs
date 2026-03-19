@@ -21,29 +21,29 @@ export default function HeroSection() {
             </span>
             Available for new projects
           </div>
-          <h1 className="text-sage-950 text-5xl leading-[1.1] font-black tracking-tight text-slate-900 md:text-7xl dark:text-white">
+          <h1 className="text-sage-950 text-2xl leading-[1.1] font-black tracking-tight text-slate-900 sm:text-3xl md:text-5xl lg:text-7xl dark:text-white">
             Android Developer Tech Tinkerer <br />
             <span className="text-primary dark:text-emerald-400">
               Full-Stack.
             </span>
           </h1>
-          <p className="text-sage-800 max-w-2xl text-lg leading-relaxed md:text-xl dark:text-slate-400">
+          <p className="text-sage-800 max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg lg:text-xl dark:text-slate-400">
             I'm a Full-Stack Developer and UI Designer specializing in building
             scalable applications with Emerald-accented aesthetics and
             Sage-toned minimalism. I turn complex problems into elegant digital
             solutions.
           </p>
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="transform rounded-xl bg-primary px-8 py-4 font-bold text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90">
+          <div className="flex flex-wrap gap-3 pt-4 sm:gap-4">
+            <button className="transform rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90 sm:px-8 sm:py-4 sm:text-base">
               View My Work
             </button>
-            <button className="rounded-xl border border-slate-300/50 bg-slate-200 px-8 py-4 font-bold text-slate-900 transition-all hover:bg-slate-300 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10">
+            <button className="rounded-xl border border-slate-300/50 bg-slate-200 px-6 py-2.5 text-sm font-bold text-slate-900 transition-all hover:bg-slate-300 sm:px-8 sm:py-4 sm:text-base dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10">
               Download CV
             </button>
           </div>
           <div className="border-sage-100 flex items-center gap-8 border-t pt-8 dark:border-white/5">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-slate-900 dark:text-white">
+              <span className="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
                 5+
               </span>
               <span className="text-sm tracking-wider text-slate-500 uppercase">
@@ -51,7 +51,7 @@ export default function HeroSection() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-slate-900 dark:text-white">
+              <span className="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
                 120+
               </span>
               <span className="text-sm tracking-wider text-slate-500 uppercase">
@@ -59,7 +59,7 @@ export default function HeroSection() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-slate-900 dark:text-white">
+              <span className="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
                 40+
               </span>
               <span className="text-sm tracking-wider text-slate-500 uppercase">

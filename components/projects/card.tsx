@@ -11,8 +11,10 @@ export default function Card() {
         />
         <div className="from-background-dark/80 absolute inset-0 bg-gradient-to-t to-transparent"></div>
       </div>
-      <div className="flex flex-grow flex-col p-6">
-        <h3 className="mb-2 text-xl font-bold">Quantum Dashboard</h3>
+      <div className="sm:p-6\ flex flex-grow flex-col p-4">
+        <h3 className="font-bold\ mb-2 text-lg sm:text-xl">
+          Quantum Dashboard
+        </h3>
         <p className="mb-4 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">
           Enterprise-grade analytics platform featuring real-time data streaming
           and complex visualization modules.
