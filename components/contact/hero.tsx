@@ -1,3 +1,6 @@
+import { FaLocationPin } from "react-icons/fa6"
+import { MdOutlineMailOutline } from "react-icons/md"
+
 export default function Hero() {
   return (
     <section className="reveal flex flex-col justify-center lg:col-span-5">
@@ -22,27 +25,31 @@ export default function Hero() {
       <div className="mb-12 space-y-6">
         <div className="group flex cursor-pointer items-center gap-4">
           <div className="flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary/50 group-hover:text-primary dark:group-hover:bg-emerald-400/30 dark:group-hover:text-emerald-400">
-            <span className="material-symbols-outlined">mail</span>
+            <span className="material-symbols-outlined">
+              <MdOutlineMailOutline />
+            </span>
           </div>
           <div>
             <p className="text-xs font-bold tracking-tighter text-slate-500 uppercase">
               Email me at
             </p>
             <p className="text-sm font-medium transition-colors group-hover:text-primary sm:text-base dark:group-hover:text-emerald-400">
-              hello@alexrivera.dev
+              alam.shafee@gmail.com
             </p>
           </div>
         </div>
         <div className="group flex cursor-pointer items-center gap-4">
           <div className="flex size-12 items-center justify-center rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary/50 group-hover:text-primary dark:group-hover:bg-emerald-400/30 dark:group-hover:text-emerald-400">
-            <span className="material-symbols-outlined">location_on</span>
+            <span className="material-symbols-outlined">
+              <FaLocationPin />
+            </span>
           </div>
           <div>
             <p className="text-xs font-bold tracking-tighter text-slate-500 uppercase">
               Current Location
             </p>
             <p className="text-sm font-medium transition-colors group-hover:text-primary sm:text-base dark:group-hover:text-emerald-400">
-              San Francisco, CA
+              Dhaka, Dhanmondi, Bangladesh
             </p>
           </div>
         </div>

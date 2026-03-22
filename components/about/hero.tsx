@@ -21,10 +21,8 @@ export default function Hero() {
           My Story
         </div>
         <h1 className="text-2xl leading-[1.1] font-bold tracking-tight text-slate-900 sm:text-3xl md:text-5xl lg:text-6xl dark:text-slate-100">
-          Crafting digital
-          <span className="text-primary italic dark:text-emerald-400">
-            excellence
-          </span>{" "}
+          Crafting digital{" "}
+          <span className="text-primary dark:text-emerald-400">excellence</span>{" "}
           through code.
         </h1>
         <div className="space-y-6 font-sans text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400">

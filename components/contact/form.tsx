@@ -1,3 +1,11 @@
+"use client"
+import { MdSend } from "react-icons/md"
+import dynamic from "next/dynamic"
+import type { MapProps } from "../Map"
+import { FaLocationCrosshairs, FaLocationPinLock } from "react-icons/fa6"
+
+const Map = dynamic(() => import("../Map"), { ssr: false })
+
 export default function Form() {
   return (
     <section className="reveal flex flex-col justify-center lg:col-span-7">
@@ -58,32 +66,39 @@ export default function Form() {
           >
             SEND MESSAGE
             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
-              arrow_forward
+              <MdSend />
             </span>
           </button>
         </form>
         {/* <!-- Location Indicator / Map Section --> */}
+        {/* */}
         <div className="mt-12">
           <p className="mb-4 text-xs font-bold tracking-widest text-slate-500 uppercase dark:text-slate-400">
-            Location: San Francisco, CA
+            Location: Dhanmondi, Dhaka, Bangladesh
           </p>
+
           <div className="relative h-48 w-full overflow-hidden rounded-xl border border-primary">
-            <div
-              className="absolute inset-0 bg-primary/20 bg-cover bg-center mix-blend-overlay grayscale"
-              data-alt="Abstract dark map pattern of San Francisco"
-              data-location="San Francisco"
-            ></div>
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* 1. The Dynamic Map Component */}
+            <div className="absolute inset-0 z-0">
+              <Map center={[23.7461, 90.3742]} />
+            </div>
+
+            {/* 2. Optional: Custom Pulse Overlay (If you want to keep your specific UI style) */}
+            {/* Note: We use pointer-events-none so users can still click the map below it */}
+            <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
               <div className="relative">
-                <div className="absolute -inset-4 animate-pulse rounded-full bg-primary/20"></div>
+                <div className="absolute -inset-4 animate-pulse rounded-full bg-primary/30"></div>
+                {/* You can keep this icon or let the Leaflet Marker handle it */}
                 <span className="material-symbols-outlined relative z-10 text-4xl text-primary">
-                  location_on
+                  <FaLocationCrosshairs size={1} />
                 </span>
               </div>
             </div>
-            <div className="glass absolute bottom-4 left-4 flex items-center gap-2 rounded-lg px-3 py-1.5 text-[10px] font-bold tracking-wider uppercase">
-              <span className="size-2 rounded-full bg-primary"></span>
-              Currently UTC -8
+
+            {/* 3. Timezone Badge - Ensure z-index is high */}
+            <div className="glass absolute bottom-4 left-4 z-[1000] flex items-center gap-2 rounded-lg px-3 py-1.5 text-[10px] font-bold tracking-wider uppercase">
+              <span className="size-2 animate-pulse rounded-full bg-primary"></span>
+              Currently UTC +6
             </div>
           </div>
         </div>
