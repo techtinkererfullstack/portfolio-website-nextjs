@@ -1,10 +1,12 @@
 import Main from "@/components/projects/main"
 import Page from "../page"
+import { getAllProjects } from "@/lib/get-projects"
 
-export default function Projects() {
+export default async function Projects() {
+  const data = await getAllProjects()
   return (
     <Page>
-      <Main />
+      <Main projects={data} />
     </Page>
   )
 }

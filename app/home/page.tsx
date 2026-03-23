@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Page from "../page"
 import Main from "@/components/home/main"
+import { getAllProjects } from "@/lib/get-projects"
 
 export const metadata: Metadata = {
   title: "Shafe Alam | Android & Full-Stack Developer | Fintech Specialist",
@@ -43,10 +44,12 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 }
-export default function Home() {
+
+export default async function Home() {
+  const projects = await getAllProjects()
   return (
     <Page>
-      <Main />
+      <Main projects={projects} />
     </Page>
   )
 }

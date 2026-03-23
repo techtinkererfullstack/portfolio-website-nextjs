@@ -4,8 +4,13 @@ import useReveal from "@/hooks/reveal"
 import FeatureProjects from "./feature-projects"
 import HeroSection from "./hero-section"
 import LatestThoughts from "./latest-thoughts"
+import { Project } from "@/data/projects"
 
-export default function Main() {
+interface MainProps {
+  projects: Project[]
+}
+
+export default function Main({ projects }: MainProps) {
   useReveal()
   return (
     <main className="bg-background-light dark:bg-background-dark pt-10 pb-20">
@@ -14,7 +19,7 @@ export default function Main() {
           <HeroSection />
         </section>
         <section className="reveal">
-          <FeatureProjects />
+          <FeatureProjects projects={projects} />
         </section>
         <section className="reveal">
           <LatestThoughts />
