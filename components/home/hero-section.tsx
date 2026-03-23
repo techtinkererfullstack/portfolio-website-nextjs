@@ -28,10 +28,9 @@ export default function HeroSection() {
             </span>
           </h1>
           <p className="text-sage-800 max-w-2xl text-sm leading-relaxed sm:text-base md:text-lg lg:text-xl dark:text-slate-400">
-            I'm a Full-Stack Developer and UI Designer specializing in building
-            scalable applications with Emerald-accented aesthetics and
-            Sage-toned minimalism. I turn complex problems into elegant digital
-            solutions.
+            With 10 years of experience as a Chief Accountant, I build
+            high-performance Android and Web applications designed for technical
+            precision and business ROI.
           </p>
           <div className="flex flex-wrap gap-3 pt-4 sm:gap-4">
             <button className="transform rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90 sm:px-8 sm:py-4 sm:text-base">

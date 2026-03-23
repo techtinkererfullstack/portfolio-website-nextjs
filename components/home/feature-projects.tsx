@@ -31,7 +31,7 @@ export default function FeatureProjects() {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <Link
-            href="/projects/features/ecommerce"
+            href="/home/feature-projects/ecommerce-revolution"
             className="group stagger-item cursor-pointer"
           >
             <div className="group stagger-item cursor-pointer">
