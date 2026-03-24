@@ -1,4 +1,10 @@
-import { FaArrowCircleRight, FaCode, FaEye } from "react-icons/fa"
+import {
+  FaArrowCircleRight,
+  FaCode,
+  FaEye,
+  FaLaptopCode,
+  FaMobile,
+} from "react-icons/fa"
 import { Project } from "@/data/projects"
 
 interface FeatureProjectsProps {
@@ -84,16 +90,42 @@ export default function FeatureProjects({ projects }: FeatureProjectsProps) {
                     </span>
                   </a>
                 )}
-                {project.codeUrl && (
+                {project.frontendUrl && (
                   <a
-                    href={project.codeUrl}
+                    href={project.frontendUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 p-1.5 text-white backdrop-blur-md transition-all hover:border-emerald-400 hover:bg-emerald-500"
-                    title="View Code"
+                    title="FrontEnd Code"
+                  >
+                    <span className="material-symbols-outlined text-sm">
+                      <FaLaptopCode />
+                    </span>
+                  </a>
+                )}
+                {project.backendUrl && (
+                  <a
+                    href={project.backendUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 p-1.5 text-white backdrop-blur-md transition-all hover:border-emerald-400 hover:bg-emerald-500"
+                    title="BackEnd Code"
                   >
                     <span className="material-symbols-outlined text-sm">
                       <FaCode />
+                    </span>
+                  </a>
+                )}
+                {project.androidUrl && (
+                  <a
+                    href={project.androidUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 p-1.5 text-white backdrop-blur-md transition-all hover:border-emerald-400 hover:bg-emerald-500"
+                    title="Android Code"
+                  >
+                    <span className="material-symbols-outlined text-sm">
+                      <FaMobile />
                     </span>
                   </a>
                 )}

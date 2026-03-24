@@ -1,7 +1,13 @@
 import { getProjectBySlug } from "@/lib/get-projects"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
+import {
+  FaCode,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaLaptopCode,
+  FaMobile,
+} from "react-icons/fa"
 
 export default async function ProjectDetails({
   params,
@@ -32,27 +38,49 @@ export default async function ProjectDetails({
             </span>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-2 sm:gap-4">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-white transition-colors hover:bg-primary/90"
+              className="flex items-center gap-2 rounded-lg bg-primary px-3 py-2 text-sm text-white transition-colors hover:bg-primary/90 sm:px-4 sm:text-base"
             >
               <FaExternalLinkAlt />
               Live Demo
             </a>
           )}
-          {project.codeUrl && (
+          {project.frontendUrl && (
             <a
-              href={project.codeUrl}
+              href={project.frontendUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-primary transition-colors hover:bg-primary hover:text-white"
+              className="flex items-center gap-2 rounded-lg border border-primary px-3 py-2 text-sm text-primary transition-colors hover:bg-primary hover:text-white sm:px-4 sm:text-base"
             >
-              <FaGithub />
-              View Code
+              <FaLaptopCode />
+              Frontend
+            </a>
+          )}
+          {project.backendUrl && (
+            <a
+              href={project.backendUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg border border-primary px-3 py-2 text-sm text-primary transition-colors hover:bg-primary hover:text-white sm:px-4 sm:text-base"
+            >
+              <FaCode />
+              Backend
+            </a>
+          )}
+          {project.androidUrl && (
+            <a
+              href={project.androidUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg border border-primary px-3 py-2 text-sm text-primary transition-colors hover:bg-primary hover:text-white sm:px-4 sm:text-base"
+            >
+              <FaMobile />
+              Android
             </a>
           )}
         </div>

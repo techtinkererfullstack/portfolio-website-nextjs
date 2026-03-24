@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-3 pt-4 sm:gap-4">
             <Link href="/projects">
               <button className="transform rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:-translate-y-1 hover:bg-primary/90 sm:px-8 sm:py-4 sm:text-base">
-                View My Work
+                Projects
               </button>
             </Link>
             <Link
@@ -62,7 +62,7 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
-                120+
+                40+
               </span>
               <span className="text-sm tracking-wider text-slate-500 uppercase">
                 Projects Done
@@ -70,7 +70,7 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-slate-900 sm:text-2xl dark:text-white">
-                40+
+                20+
               </span>
               <span className="text-sm tracking-wider text-slate-500 uppercase">
                 Clients

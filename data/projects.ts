@@ -6,7 +6,9 @@ export interface Project {
   slug: string
   image?: string
   liveUrl?: string
-  codeUrl?: string
+  frontendUrl?: string
+  backendUrl?: string
+  androidUrl?: string
   detailedDescription?: string
   features?: string[]
   technologies?: string[]
@@ -16,15 +18,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Distribution Management System",
+    title: "Unique Fragrance BD Ecommerce",
     description: "An enterprise-grade DMS for high-staff automation.",
-    tags: ["Next.js", "NestJS", "Kotlin"],
+    tags: ["React", "ChakraUI", "Express", "PostgreSQL"],
     slug: "dms-project",
-    image:
-      "https://github.com/techtinkererfullstack/shafe-alam-portfolio-old/blob/main/img/project-1/project-1-pic-1.PNG?raw=trueimg/project-1/project-1-pic-1.PNG",
-    liveUrl: "#",
-    codeUrl: "#",
-    categorySlug: "Mobile",
+    image: "/ufbd.png",
+    liveUrl: "https://uniquefrarancebd.netlify.app/",
+    frontendUrl: "https://github.com/techtinkererfullstack/ufbd_react",
+    backendUrl: "https://github.com/techtinkererfullstack/ufbdsimple-backend",
+    androidUrl: "#",
+    categorySlug: "Full-Stack",
     detailedDescription:
       "A comprehensive distribution management system built with modern web technologies to automate high-staff operations. Features include real-time inventory tracking, automated order processing, and advanced analytics dashboard.",
     features: [
@@ -34,7 +37,7 @@ export const projects: Project[] = [
       "Multi-user role management",
       "API integrations",
     ],
-    technologies: ["Next.js", "NestJS", "Kotlin", "PostgreSQL", "Redis"],
+    technologies: ["React", "ChakraUI", "Express", "PostgreSQL"],
   },
   {
     id: "2",
@@ -42,11 +45,10 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     categorySlug: "Backend",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -64,10 +66,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -85,10 +86,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -106,10 +106,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -127,10 +126,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -148,10 +146,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
@@ -169,10 +166,9 @@ export const projects: Project[] = [
     description: "E-commerce admin panel for perfume brand management.",
     tags: ["React", "Tailwind", "Emerald UI"],
     slug: "perfume-admin",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZjubHpL1a6i6hpEoPFKsT_VYWYsWHuuSh9JqCofAMNa1D8roarY6gCrby_biriSqrYv_gZ2TmwdjlyOB8_V9pHsLsDlqId7pOhrN2cudBRtHeyaJFa0OZvVFGS0uX7CLAOPLt8yRQ5rD5U-CJIFnFWgGmkiA1tJrb4mkg1rcn0DkpWDOEQkVA8gW1GdW-7hwdqcCl03L-aB9RI1ID5zpElJHaLbnhCNga4OHu9-37sF3l1BEbXNjpp1ZKQwW-Nrki7CkNFquObI",
+    image: "/ufbd.png",
     liveUrl: "#",
-    codeUrl: "#",
+    frontendUrl: "#",
     detailedDescription:
       "A sophisticated admin dashboard for managing an e-commerce perfume brand. Includes product catalog management, order tracking, customer analytics, and marketing tools.",
     features: [
