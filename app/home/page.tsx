@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Page from "../page"
 import Main from "@/components/home/main"
 import { getAllProjects } from "@/lib/get-projects"
+import { getFeaturedBlogs } from "@/lib/get-blogs"
 
 export const metadata: Metadata = {
   title: "Shafe Alam | Android & Full-Stack Developer | Fintech Specialist",
@@ -47,9 +48,10 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const projects = await getAllProjects()
+  const blogs = await getFeaturedBlogs(2)
   return (
     <Page>
-      <Main projects={projects} />
+      <Main projects={projects} blogs={blogs} />
     </Page>
   )
 }

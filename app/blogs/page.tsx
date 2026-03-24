@@ -1,10 +1,12 @@
 import Main from "@/components/blogs/main"
 import Page from "../page"
+import { getAllBlogs } from "@/lib/get-blogs"
 
-export default function Blogs() {
+export default async function Blogs() {
+  const blogs = await getAllBlogs()
   return (
     <Page>
-      <Main />
+      <Main blogs={blogs} />
     </Page>
   )
 }
