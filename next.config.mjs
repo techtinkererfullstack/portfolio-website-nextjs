@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ]
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "github.com",
+        pathname: "/**", // Allows all paths from this host
+      },
+    ],
+  },
 }
 
 export default nextConfig

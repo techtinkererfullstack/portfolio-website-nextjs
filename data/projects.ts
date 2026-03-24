@@ -20,7 +20,8 @@ export const projects: Project[] = [
     description: "An enterprise-grade DMS for high-staff automation.",
     tags: ["Next.js", "NestJS", "Kotlin"],
     slug: "dms-project",
-    image: "/dms-screenshot.png",
+    image:
+      "https://github.com/techtinkererfullstack/shafe-alam-portfolio-old/blob/main/img/project-1/project-1-pic-1.PNG?raw=trueimg/project-1/project-1-pic-1.PNG",
     liveUrl: "#",
     codeUrl: "#",
     categorySlug: "Mobile",
