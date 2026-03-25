@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         primary: "#10b981", // Emerald-500
         "background-light": "#f8fdfa",
-        "background-dark": "#10221d",
+        "background-dark": "#14532d", // sage-900 lighter green
         "glass-border": "rgba(146, 201, 186, 0.1)",
         sage: {
           50: "#f0fdf4",

@@ -33,7 +33,7 @@ export default function BottomNavbar() {
 
   return (
     <nav className="fixed bottom-0 left-0 z-[100] w-screen lg:hidden">
-      <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-0 overflow-hidden rounded-t-2xl border bg-primary/10 p-1 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
+      <div className="border-glass-border dark:bg-sage-950/60 mx-0 overflow-hidden rounded-t-2xl border bg-primary/10 p-1 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(16,185,129,0.2)] backdrop-blur-xl dark:border-emerald-900/40">
         <div className="flex w-full flex-wrap items-center justify-between gap-0 overflow-hidden">
           {navItems.map((item) => {
             const isActive = activeHref === item.href
@@ -46,21 +46,21 @@ export default function BottomNavbar() {
                 onClick={() => setActiveHref(item.href)}
                 className={`flex h-full w-1/6 min-w-0 flex-col items-center justify-center rounded-none px-0 py-2 text-center transition-all duration-200 sm:w-1/6 ${
                   isActive
-                    ? "text-primary"
-                    : "text-sage-700 dark:text-sage-300 hover:text-primary"
+                    ? "text-primary dark:text-emerald-400"
+                    : "text-sage-700 dark:text-sage-300 hover:text-primary dark:hover:text-emerald-400"
                 }`}
               >
                 <Icon
                   className={`h-6 w-6 transition duration-200 sm:h-7 sm:w-7 ${
                     isActive
-                      ? "scale-110 text-primary"
+                      ? "scale-110 text-primary dark:text-emerald-400"
                       : "text-sage-600 dark:text-sage-200"
                   }`}
                 />
                 <span
                   className={`font-inter mt-1 text-xs leading-none font-medium tracking-tight transition-colors duration-200 sm:text-sm ${
                     isActive
-                      ? "text-primary"
+                      ? "text-primary dark:text-emerald-400"
                       : "text-sage-600 dark:text-sage-200"
                   }`}
                   style={{ whiteSpace: "normal", wordBreak: "break-word" }}

@@ -33,6 +33,16 @@ export default function RootLayout({
     >
       <body className="bg-background-light dark:bg-background-dark">
         <ThemeProvider>
+          <div
+            className="parallax-element fixed inset-0 -z-10 h-screen w-screen rounded-full bg-emerald-500/3 blur-3xl"
+            style={{ top: "20%", left: "10%" }}
+            data-speed="0.05"
+          />
+          <div
+            className="parallax-element fixed inset-0 -z-10 h-64 w-64 rounded-full bg-primary/10 blur-xl"
+            style={{ bottom: "10%", right: "20%" }}
+            data-speed="-0.1"
+          />
           <NavbarGlass />
           {children}
           <Footer />

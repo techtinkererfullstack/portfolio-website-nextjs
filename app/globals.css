@@ -40,13 +40,15 @@
 }
 
 .dark {
-  --background: oklch(0.145 0.008 326);
+  --background: oklch(
+    0.18 0.02 170
+  ); /* Brighter sage-green matching sage-900 */
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.212 0.019 322.12);
+  --card: oklch(0.22 0.015 325);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.212 0.019 322.12);
+  --popover: oklch(0.22 0.015 325);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.432 0.095 166.913);
+  --primary: oklch(0.48 0.105 168);
   --primary-foreground: oklch(0.979 0.021 166.113);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
@@ -132,8 +134,9 @@
 }
 
 .dark .glass-nav {
-  background: rgba(16, 34, 29, 0.7);
-  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+  background: rgba(16, 34, 29, 0.8);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
 }
 
 /* Animations from your HTML */

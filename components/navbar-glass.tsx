@@ -65,7 +65,7 @@ export default function NavbarGlass() {
                     <Link
                       className={`text-sm transition-colors ${
                         isActive
-                          ? "font-bold text-[#10b77f]" // Active Color
+                          ? "font-bold text-primary dark:font-bold dark:text-emerald-400" // Active Color
                           : "font-medium hover:text-primary dark:hover:text-emerald-400" // Inactive Color
                       }`}
                       href={link.href}
@@ -92,7 +92,7 @@ export default function NavbarGlass() {
                           stiffness: 380,
                           damping: 30,
                         }}
-                        className="h-1 w-4 rounded-full bg-[#10b77f]"
+                        className="h-1 w-4 rounded-full bg-primary dark:bg-emerald-400"
                       ></motion.div>
                     )}
                   </div>
