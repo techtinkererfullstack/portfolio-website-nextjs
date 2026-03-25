@@ -18,10 +18,10 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build Next.js
-        run: npm run build
+        run: bun run build
 
       - name: Deploy to Netlify
         run: npx netlify-cli deploy --dir=.next --prod --build
