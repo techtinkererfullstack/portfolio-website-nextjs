@@ -31,7 +31,7 @@ export default function RootLayout({
         notoSans.variable
       )}
     >
-      <body className="bg-background-light dark:bg-background-dark min-h-screen pb-24 md:pb-0">
+      <body className="bg-background-light dark:bg-background-dark">
         <ThemeProvider>
           <NavbarGlass />
           {children}
