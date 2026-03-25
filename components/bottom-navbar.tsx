@@ -32,7 +32,7 @@ export default function BottomNavbar() {
   }, [pathname])
 
   return (
-    <nav className="fixed bottom-0 left-0 z-50 w-full lg:hidden">
+    <nav className="fixed bottom-0 left-0 z-[100] w-screen lg:hidden">
       <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-0 overflow-hidden rounded-t-2xl border bg-primary/10 p-1 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
         <div className="flex w-full flex-wrap items-center justify-between gap-0 overflow-hidden">
           {navItems.map((item) => {
