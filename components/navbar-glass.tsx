@@ -53,7 +53,7 @@ export default function NavbarGlass() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden items-center space-x-8 md:flex">
+            <nav className="hidden items-center space-x-8 md:hidden lg:flex">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href // 3. Check if active
 
