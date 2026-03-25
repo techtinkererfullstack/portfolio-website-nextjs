@@ -33,8 +33,8 @@ export default function BottomNavbar() {
 
   return (
     <nav className="fixed bottom-0 left-0 z-50 w-full lg:hidden">
-      <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-0 overflow-x-hidden rounded-t-2xl border bg-primary/10 p-1 shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
-        <div className="flex w-full items-center justify-between gap-0 overflow-hidden">
+      <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-0 overflow-hidden rounded-t-2xl border bg-primary/10 p-1 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
+        <div className="flex w-full flex-wrap items-center justify-between gap-0 overflow-hidden">
           {navItems.map((item) => {
             const isActive = activeHref === item.href
             const Icon = item.icon
@@ -44,7 +44,7 @@ export default function BottomNavbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveHref(item.href)}
-                className={`flex h-full w-1/6 min-w-0 flex-col items-center justify-center rounded-none px-1 py-2 text-center transition-all duration-200 ${
+                className={`flex h-full w-1/6 min-w-0 flex-col items-center justify-center rounded-none px-0 py-2 text-center transition-all duration-200 sm:w-1/6 ${
                   isActive
                     ? "text-primary"
                     : "text-sage-700 dark:text-sage-300 hover:text-primary"
@@ -58,11 +58,12 @@ export default function BottomNavbar() {
                   }`}
                 />
                 <span
-                  className={`font-inter mt-1 text-xs font-medium tracking-tight transition-colors duration-200 sm:text-sm ${
+                  className={`font-inter mt-1 text-xs leading-none font-medium tracking-tight transition-colors duration-200 sm:text-sm ${
                     isActive
                       ? "text-primary"
                       : "text-sage-600 dark:text-sage-200"
                   }`}
+                  style={{ whiteSpace: "normal", wordBreak: "break-word" }}
                 >
                   {item.label}
                 </span>
