@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { cn } from "@/lib/utils"
 import NavbarGlass from "@/components/navbar-glass"
 import Footer from "@/components/footer"
+import BottomNavbar from "@/components/bottom-navbar"
 
 const notoSans = Noto_Sans({ variable: "--font-sans" })
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <NavbarGlass />
           {children}
           <Footer />
+          <BottomNavbar />
         </ThemeProvider>
       </body>
     </html>

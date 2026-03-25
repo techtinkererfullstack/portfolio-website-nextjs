@@ -46,8 +46,8 @@ export function Navbar() {
           <span className="relative">Shafe</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 md:flex">
+        {/* Navigation */}
+        <div className="flex flex-wrap items-center gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -62,76 +62,21 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Desktop Social Links & Mobile Menu Toggle */}
-        <div className="flex items-center gap-4">
-          {/* Desktop Social Links */}
-          <div className="hidden gap-2 md:flex">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="group relative rounded-lg p-2.5 transition-all duration-300"
-              >
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/10 to-white/5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100" />
-                <Icon className="relative h-5 w-5 transition-transform duration-300 group-hover:scale-110 group-hover:text-foreground/90" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-64 border-l border-white/20 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-xl dark:from-black/20 dark:to-black/10"
+        {/* Social Links */}
+        <div className="flex gap-2">
+          {socialLinks.map(({ icon: Icon, href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="group relative rounded-lg p-2.5 transition-all duration-300"
             >
-              <div className="flex flex-col gap-6 py-6">
-                {/* Mobile Navigation Links */}
-                <div className="flex flex-col gap-3">
-                  <h3 className="font-semibold">Navigation</h3>
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.Link}
-                      onClick={() => setIsOpen(false)}
-                      className="group relative rounded-md px-3 py-2 transition-all duration-300 hover:text-foreground"
-                    >
-                      <span className="absolute inset-0 rounded-md bg-white/5 opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100 dark:bg-white/0" />
-                      <span className="relative">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-
-                {/* Mobile Social Links */}
-                <div className="flex flex-col gap-3 border-t border-white/20 pt-6">
-                  <h3 className="font-semibold">Connect</h3>
-                  <div className="flex gap-3">
-                    {socialLinks.map(({ icon: Icon, href, label }) => (
-                      <Link
-                        key={label}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={label}
-                        className="group relative rounded-lg p-2.5 transition-all duration-300"
-                      >
-                        <span className="absolute inset-0 rounded-lg bg-white/5 opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100" />
-                        <Icon className="relative h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+              <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/10 to-white/5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100" />
+              <Icon className="relative h-5 w-5 transition-transform duration-300 group-hover:scale-110 group-hover:text-foreground/90" />
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

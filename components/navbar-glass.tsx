@@ -9,9 +9,6 @@ import { VscTerminalDebian } from "react-icons/vsc"
 import { FaUser, FaWhatsapp } from "react-icons/fa"
 import { AiOutlineAndroid } from "react-icons/ai"
 import Image from "next/image"
-import { CiMenuFries } from "react-icons/ci"
-import { IoIosClose } from "react-icons/io"
-
 export default function NavbarGlass() {
   const phoneNumber = "8801944722657" // Replace with your number
   const message = encodeURIComponent(
@@ -19,7 +16,6 @@ export default function NavbarGlass() {
   )
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
 
-  const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname() // 2. Get current URL path
 
   const [mounted, setMounted] = useState(false)
@@ -121,51 +117,10 @@ export default function NavbarGlass() {
                   <FaWhatsapp />
                 </Link>
               </button>
-
-              <button
-                className="p-2 transition-colors hover:text-primary md:hidden dark:hover:text-emerald-400"
-                onClick={() => setIsOpen(true)}
-              >
-                <span className="material-symbols-outlined">
-                  <CiMenuFries />
-                </span>
-              </button>
             </div>
           </div>
         </div>
       </header>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`bg-background-dark/95 fixed inset-0 z-[100] backdrop-blur-xl transition-all duration-300 ${
-          isOpen ? "visible opacity-100" : "invisible opacity-0"
-        } flex flex-col items-center justify-center lg:hidden`}
-      >
-        <button
-          className="absolute top-5 right-5 text-white"
-          onClick={() => setIsOpen(false)}
-        >
-          <span className="material-symbols-outlined text-3xl text-red-500">
-            <IoIosClose />
-          </span>
-        </button>
-        <nav className="flex flex-col items-center gap-8 text-2xl font-bold">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className={
-                pathname === link.href
-                  ? "text-primary"
-                  : "text-primary/80 hover:text-primary"
-              }
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-      </div>
     </>
   )
 }
