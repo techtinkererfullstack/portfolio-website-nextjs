@@ -1,21 +1,14 @@
-# Dark Mode Green Consistency Task
+# API Integration TODO
 
-## Steps:
+## Approved Plan Steps
 
-- [x] Create TODO.md with plan breakdown
-- [x] Update app/globals.css for enhanced glass-nav dark green styles
-- [x] Edit components/navbar-glass.tsx for consistent emerald active states
-- [x] Edit components/bottom-navbar.tsx for matching dark green active/container
-- [x] Test: `bun run dev`, toggle dark mode, navigate all pages (mobile too)
-- [x] Complete task with attempt_completion
+- [ ] 1. Create .env.local
+- [x] 2. Create types/project.ts, types/blog.ts
+- [x] 3. Update lib/get-projects.ts (API + fallback)
+- [x] 4. Update lib/get-blogs.ts (API + fallback)
+- [x] 5. Update components/contact/form.tsx (form submit)
+- [x] 6. Test localhost (fallback works)
+- [ ] 7. User creates backend
+- [ ] 8. Deploy Netlify + functions
 
-**Phase 2: Brightening dark greens to match home.**
-
-## Phase 2 Steps:
-
-- [x] Update tailwind.config.ts background-dark to sage-900
-- [x] Add green glows to app/layout.tsx like home
-- [ ] Update globals.css shadcn dark vars brighter
-- [x] Cleanup components/home/main.tsx bg
-- [ ] Restart dev, test all pages dark mode
-- [ ] Complete
+**Say "step 1" to proceed step-by-step.**
