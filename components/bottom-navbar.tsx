@@ -13,7 +13,6 @@ const navItems = [
   { label: "Learning", icon: MdTimeline, href: "/learning" },
   { label: "Blogs", icon: FaBlog, href: "/blogs" },
   { label: "Notes", icon: FaBlog, href: "/notes" },
-  { label: "Resume", icon: VscFilePdf, href: "/resume" },
   { label: "About", icon: FaUserAlt, href: "/about" },
 ]
 
@@ -34,7 +33,7 @@ export default function BottomNavbar() {
 
   return (
     <nav className="fixed bottom-0 left-0 z-50 w-full lg:hidden">
-      <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-1 overflow-x-hidden rounded-t-2xl border bg-primary/10 p-0 shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
+      <div className="border-glass-border dark:border-sage-900/40 dark:bg-sage-950/40 mx-0 overflow-x-hidden rounded-t-2xl border bg-primary/10 p-1 shadow-[0_-8px_24px_rgba(18,70,50,0.25)] backdrop-blur-xl">
         <div className="flex w-full items-center justify-between gap-0 overflow-hidden">
           {navItems.map((item) => {
             const isActive = activeHref === item.href
@@ -45,21 +44,21 @@ export default function BottomNavbar() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setActiveHref(item.href)}
-                className={`flex h-full w-1/6 min-w-0 flex-col items-center justify-center rounded-none px-0 py-1 text-center text-[9px] leading-tight transition-all duration-200 sm:text-[10px] ${
+                className={`flex h-full w-1/6 min-w-0 flex-col items-center justify-center rounded-none px-1 py-2 text-center transition-all duration-200 ${
                   isActive
                     ? "text-primary"
                     : "text-sage-700 dark:text-sage-300 hover:text-primary"
                 }`}
               >
                 <Icon
-                  className={`h-5 w-5 transition duration-200 ${
+                  className={`h-6 w-6 transition duration-200 sm:h-7 sm:w-7 ${
                     isActive
                       ? "scale-110 text-primary"
                       : "text-sage-600 dark:text-sage-200"
                   }`}
                 />
                 <span
-                  className={`font-inter mt-1 text-[8px] font-medium tracking-tight transition-colors duration-200 sm:text-[10px] ${
+                  className={`font-inter mt-1 text-xs font-medium tracking-tight transition-colors duration-200 sm:text-sm ${
                     isActive
                       ? "text-primary"
                       : "text-sage-600 dark:text-sage-200"

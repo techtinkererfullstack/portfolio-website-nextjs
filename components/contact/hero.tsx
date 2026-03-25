@@ -19,8 +19,9 @@ export default function Hero() {
         great.
       </h1>
       <p className="mb-10 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg dark:text-slate-400">
-        Senior Full-Stack Engineer based in San Francisco. I'm currently looking
-        for high-impact opportunities in AI, Fintech, or Cloud Infrastructure.
+        Android Full-Stack developer based in Dhanmondi, Dhaka, Bangladesh. I'm
+        currently looking for high-impact opportunities in Android, Fintech, or
+        Ecommerce.
       </p>
       <div className="mb-12 space-y-6">
         <div className="group flex cursor-pointer items-center gap-4">
